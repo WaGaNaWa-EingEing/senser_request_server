@@ -12,7 +12,7 @@ import pickle as pic
 
 clf5_from_joblib = joblib.load('testmodel.pkl')
 
-clf4_from_joblib = joblib.load('testmodel.pkl')
+clf4_from_joblib = joblib.load('4_model1.pkl')
 
 clf2_from_joblib = joblib.load('testmodel.pkl')
 
@@ -28,6 +28,10 @@ class HelloWorld(Resource):
 
         data = pd.read_json(json.dumps(content))
 
+        Floor = data.Floor
+
+        Floor = Floor[0]
+
         macs = data.macs
         X = []
         for a in macs:
@@ -35,7 +39,13 @@ class HelloWorld(Resource):
         x = []
         x.append(X)
         X = pd.DataFrame(x)
-        result = str(clf5_from_joblib.predict(X))
+
+        if Floor == 2:
+            result = str(clf2_from_joblib.predict(X))
+        elif Floor == 4:
+            result = str(clf4_from_joblib.predict(X))
+        elif Floor == 5:
+            result = str(clf5_from_joblib.predict(X))
 
         return {"Result":result}
 
