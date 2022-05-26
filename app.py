@@ -10,9 +10,9 @@ import joblib
 import json
 import pickle as pic
 
-clf5_from_joblib = joblib.load('5_model1.pkl')
+clf5_from_joblib = joblib.load('5_model2.pkl')
 
-clf4_from_joblib = joblib.load('4_model1.pkl')
+clf4_from_joblib = joblib.load('4_model2.pkl')
 
 clf2_from_joblib = joblib.load('testmodel.pkl')
 
