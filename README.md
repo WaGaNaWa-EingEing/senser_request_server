@@ -5,7 +5,7 @@ Made with Python + Flask
 
 for pre-built random forest-based learning model : check Random_forest.ipynb
 
-*_model*.pkl : random forest-based learning model file.
+*?_model*?.pkl : random forest-based learning model file.
 
 app.py: Flask server for prediction 
 
