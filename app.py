@@ -10,11 +10,11 @@ import joblib
 import json
 import pickle as pic
 
-clf5_from_joblib = joblib.load('5_model2.pkl')
+clf5_from_joblib = joblib.load('5_model3.pkl')
 
-clf4_from_joblib = joblib.load('4_model2.pkl')
+clf4_from_joblib = joblib.load('4_model3.pkl')
 
-clf2_from_joblib = joblib.load('2_model1.pkl')
+clf2_from_joblib = joblib.load('2_model3.pkl')
 
 app = Flask(__name__)
 api = Api(app)
